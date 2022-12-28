@@ -27,7 +27,7 @@ class GenMachineKeyTool extends React.Component{
         console.log("code:" + `${this.state.machineCode}`);
         axios
           .request({
-            url: process.env.API_URL + "/GenKey",
+            url: `${process.env.GATSBY_API_URL}` + "/GenKey",
             method: "get",
             params: {
               machineCode: this.state.machineCode,
