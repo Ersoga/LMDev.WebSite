@@ -49,7 +49,8 @@ const GenKey = () => {
               回到 <Link to="/">主页</Link>.
             </Themed.p>
             <h1>本机变量</h1>
-            <p>API:{process.env.API_URL}</p>
+            <p>DEV.API:{process.env.GATSBY_API_URL}</p>
+            <p>API:{process.env.GATSBY_API_URL}</p>
             <h1>云变量</h1>
             <p>BRANCH:{process.env.BRANCH}</p>
             <p>COMMIT_REF:{process.env.COMMIT_REF}</p>

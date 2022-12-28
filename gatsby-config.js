@@ -21,6 +21,12 @@ module.exports = {
   trailingSlash: `never`,
   plugins: [
     {
+      resolve:`gatsby-plugin-gatsby-cloud`,
+      options:{
+        
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sections`,
