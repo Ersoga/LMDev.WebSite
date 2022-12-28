@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "name": "lmdev",
+  "description": "Playful and Colorful One-Page portfolio featuring Parallax effects and animations",
+  "version": "0.2.13",
+  "author": "liumin",
+  "license": "0BSD",
+  "starter-name": "gatsby-starter-portfolio-cara",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "develop:cypress": "cross-env CYPRESS_SUPPORT=y yarn develop",
+    "build:cypress": "cross-env CYPRESS_SUPPORT=y yarn build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@mdx-js/react": "^2.2.1",
+    "@react-spring/parallax": "^9.6.1",
+    "@theme-ui/mdx": "^0.15.4",
+    "@theme-ui/preset-tailwind": "^0.15.4",
+    "axios": "^1.2.1",
+    "gatsby": "^5.0.0",
+    "gatsby-plugin-image": "^3.3.2",
+    "gatsby-plugin-manifest": "^5.0.0",
+    "gatsby-plugin-mdx": "^5.3.1",
+    "gatsby-plugin-theme-ui": "^0.15.4",
+    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.30",
+    "gatsby-source-filesystem": "^5.3.1",
+    "graphql-request": "^5.1.0",
+    "iview": "^3.5.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "theme-ui": "^0.15.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

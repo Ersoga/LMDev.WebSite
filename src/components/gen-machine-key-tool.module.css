@@ -1,0 +1,29 @@
+input{
+    display: inline-block;
+    width: 50%;
+    height: 2rem;
+    font-size: medium;
+}
+p,label{
+    display: inline-block;
+}
+p{
+    width: auto;
+    text-align: right;
+    margin-left: 20%;
+}
+button{
+    margin: 2rem,auto;
+    background-color: rgba(0, 127, 0,0.5);
+    width: 60%;
+    height: 2rem;
+    margin-left: 20%;
+}
+h2{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.tool{
+    margin: 0 auto;
+}
