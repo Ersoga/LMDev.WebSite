@@ -1,4 +1,4 @@
-import HttpRequest from '@/libs/axios'
+import HttpRequest from './axios'
 import config from '../config'
 const baseUrl = process.env.API_URL
 const defaultPrefix = config.ApI_VERSION;
