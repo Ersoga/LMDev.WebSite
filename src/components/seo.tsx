@@ -31,6 +31,7 @@ const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children
   return (
     <>
       <title>{seo.title}</title>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta property="og:title" content={seo.title} />
