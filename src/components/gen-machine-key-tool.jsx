@@ -24,10 +24,13 @@ class GenMachineKeyTool extends React.Component{
           alert("未设置机器码");
           return;
         }
-        console.log("code:" + `${this.state.machineCode}`);
-        axios
+        console.log(`code:${this.state.machineCode}`);
+        try
+        {
+          console.log(`start request:${process.env.GATSBY_API_URL}`);
+          axios
           .request({
-            url: `${process.env.GATSBY_API_URL}` + "/GenKey",
+            url: `${process.env.GATSBY_API_URL}/GenKey`,
             method: "get",
             params: {
               machineCode: this.state.machineCode,
@@ -35,15 +38,17 @@ class GenMachineKeyTool extends React.Component{
           })
           .then((res) => {
             this.setState({ machineKey: res.data.data });
-            console.log("key:" + `${res.data.data}`);
+            console.log(`key:${res.data.data}`);
           })
           .catch((error) => {
             alert("服务器出现了一些错误");
             return;
           });
-          
-        
-        
+        }
+        catch(ex)
+        {
+          alert(ex.message);
+        }
     }
     machineCodeChanged(event)
     {
