@@ -1,0 +1,23 @@
+{
+    "siteConfiguration": {
+        "logo": { "text": "LMDev" },
+        "navigation": {
+            "header": [
+                { "label": "主页", "url": "/" },
+                { "label": "测试", "url": "/test" },
+                { "label": "授权", "url": "/genKey" },
+                { "label": "关于", "url": "/about" }
+            ],
+            "ctaButton": { "openNewTab": true, "label": "登陆", "url": "/login" },
+            "footer": [
+                { "label": "Privacy", "url": "/privacy" },
+                { "label": "Imprint", "url": "/imprint" }
+            ]
+        },
+        "featureToggles": {
+            "useDarkModeAsDefault": false,
+            "useDarkModeBasedOnUsersPreference": true,
+            "useCookieBar": false
+        }
+    }
+}

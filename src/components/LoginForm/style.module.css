@@ -1,0 +1,16 @@
+.Button{
+    background-color:rgba(0,127,0,0.5);
+    height: 1.5rem;
+    width: 20%;
+    text-align: center;
+    vertical-align: center;
+    align-items: center;
+    margin: 10px 10px 20% 20%;
+    border: 1px solid green;
+    margin-left: 10%;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+button.Button:hover::before{
+    color: black;
+}

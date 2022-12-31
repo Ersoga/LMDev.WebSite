@@ -6,7 +6,7 @@ import Content from "../elements/content"
 import Svg from "./svg"
 import { UpDown, UpDownWide, waveAnimation } from "../styles/animations"
 import Footer from "./footer"
-import ContactMDX from "../sections/contact.mdx"
+import ContactMDX from "../content/sections/contact.mdx"
 
 const Contact = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
   <div>

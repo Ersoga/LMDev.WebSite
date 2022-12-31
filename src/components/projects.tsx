@@ -5,7 +5,7 @@ import Inner from "../elements/inner"
 import Content from "../elements/content"
 import Svg from "./svg"
 import { UpDown, UpDownWide } from "../styles/animations"
-import ProjectsMDX from "../sections/projects.mdx"
+import ProjectsMDX from "../content/sections/projects.mdx"
 
 const Projects = ({ offset, factor = 2 }: { offset: number; factor?: number }) => (
   <div>

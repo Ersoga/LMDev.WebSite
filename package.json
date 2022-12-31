@@ -30,10 +30,12 @@
     "gatsby-plugin-theme-ui": "^0.15.4",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.30",
     "gatsby-source-filesystem": "^5.3.1",
+    "gatsby-transformer-json": "^5.3.0",
     "graphql-request": "^5.1.0",
     "iview": "^3.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "theme-ui": "^0.15.4"
   },
   "devDependencies": {

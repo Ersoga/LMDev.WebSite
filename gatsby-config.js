@@ -30,9 +30,17 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sections`,
-        path: `${__dirname}/src/sections`,
+        path: `${__dirname}/src/content/sections`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    'gatsby-transformer-json',
     true && {
       resolve: `gatsby-plugin-mdx`,
       options: {},

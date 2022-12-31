@@ -4,7 +4,7 @@ import { Themed } from "@theme-ui/mdx"
 import Content from "../elements/content"
 import Inner from "../elements/inner"
 import axios from "axios"
-
+import apiserver from '../libs/api.request'
 //import Style from "./gen-machine-key-tool.module.css"
 class GenMachineKeyTool extends React.Component{
     constructor(props)
@@ -27,23 +27,38 @@ class GenMachineKeyTool extends React.Component{
         console.log(`code:${this.state.machineCode}`);
         try
         {
-          console.log(`start request:${process.env.GATSBY_API_URL}`);
-          axios
-          .request({
-            url: `${process.env.GATSBY_API_URL}/GenKey`,
-            method: "get",
-            params: {
-              machineCode: this.state.machineCode,
-            },
-          })
-          .then((res) => {
+          apiserver.request(
+            {
+              url:"/GenKey",
+              withPrefix:true,
+              //prefix:"api/v1",
+              method:"get",
+              params:{
+                machineCode: this.state.machineCode,
+              }
+            }
+          ).then((res)=>
+          {
             this.setState({ machineKey: res.data.data });
             console.log(`key:${res.data.data}`);
           })
-          .catch((error) => {
-            alert("服务器出现了一些错误");
-            return;
-          });
+          console.log(`start request:${process.env.GATSBY_API_URL}`);
+          // axios
+          // .request({
+          //   url: `${process.env.GATSBY_API_URL}/GenKey`,
+          //   method: "get",
+          //   params: {
+          //     machineCode: this.state.machineCode,
+          //   },
+          // })
+          // .then((res) => {
+          //   this.setState({ machineKey: res.data.data });
+          //   console.log(`key:${res.data.data}`);
+          // })
+          // .catch((error) => {
+          //   alert("服务器出现了一些错误");
+          //   return;
+          // });
         }
         catch(ex)
         {
