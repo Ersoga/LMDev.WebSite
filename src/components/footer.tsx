@@ -31,19 +31,19 @@ const Footer = () => {
         }}
       >
         {isDark ? (
-          <img width="22" height="33" src="../../static/lm22x33.png" alt="Logo" />
+          <img width="33" height="22" src="./lm22x33.png" alt="Logo" />
         ) : (
-          <img width="22" height="33" src="../../static/lm22x33.png" alt="Logo" />
+          <img width="33" height="22" src="./lm22x33.png" alt="Logo" />
         )}
         {`   `}
         <Link
           aria-label="Link to the theme's GitHub repository"
-          sx={{ ml: 2 }}
+          sx={{ ml: 3 }}
           href="/"
         >
           Create
         </Link>
-        <div sx={{ mx: 1 }}>by</div>
+        <div sx={{ mx: 2 }}>by</div>
         {` `}
         <Link
           aria-label="Link to the theme author's website"

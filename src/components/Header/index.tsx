@@ -4,6 +4,7 @@ import { Logo } from '../Logo';
 import { Helmet } from 'react-helmet';
 import { useMediaQuery } from '../../hooks/use-media-query';
 import { useSiteConfiguration } from '../../hooks/use-site-configuration';
+import { Animation } from '../Animation';
 import * as classes from './style.module.css';
 
 export function Header(): React.ReactElement {
@@ -58,13 +59,20 @@ export function Header(): React.ReactElement {
     const topNavigationBar = <nav className={classes.TopNavigationBar}>{navigationItems}</nav>;
     return (
       <header className={classes.Header}>
-        <div className={classes.Content}>
-          {/* Make background blurry when sidebar is opened */}
-          <Link to="/" aria-label="home">
-            <Logo fontSize="2rem" color="green" />
-          </Link>
-          {isDesktopBreakpoint ? topNavigationBar : sideNavigationBar}
-        </div>
+        {/* Make background blurry when sidebar is opened */}
+        <Helmet
+          bodyAttributes={{ class: open ? classes.Blurred : undefined }}
+        />
+        
+          {/* <div className={classes.Content}> */}
+          <Animation className={classes.ContentWrapper} type="fadeDown">
+            <Link to="/" aria-label="home">
+              <Logo fontSize="2rem" color="green" />
+            </Link>
+            {isDesktopBreakpoint ? topNavigationBar : sideNavigationBar}
+            </Animation>
+          {/* </div> */}
+        
       </header>
     );
 }

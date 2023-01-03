@@ -6,8 +6,8 @@ import Svg from "./svg"
 import { UpDown, UpDownWide } from "../styles/animations"
 import AboutMDX from "../content/sections/about.mdx"
 
-const About = ({ offset, factor = 1 }: { offset: number; factor?: number }) => (
-  <div>
+const About = ({ offset,id, factor = 1 }: { offset: number;id?:string, factor?: number }) => (
+  <div id={id}>
     <Divider
       bg="divider"
       clipPath="polygon(0 16%, 100% 4%, 100% 82%, 0 94%)"

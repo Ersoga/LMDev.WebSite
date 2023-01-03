@@ -35,7 +35,7 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
         opacity: 0.85,
         textShadow: `0 2px 10px rgba(0, 0, 0, 0.3)`,
         p: {
-          fontSize: 1,
+          fontSize: [1,2,20],
           color: `white`,
           margin: 0,
         },
@@ -48,7 +48,7 @@ const ProjectCard = ({ link, title, children, bg }: ProjectCardProps) => (
         textTransform: `uppercase`,
         letterSpacing: `wide`,
         pt: 4,
-        fontSize: [4, 5],
+        fontSize: [4, 5,30],
         fontWeight: `medium`,
         lineHeight: 1,
       }}

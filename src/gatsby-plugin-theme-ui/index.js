@@ -71,7 +71,7 @@ const theme = merge(tailwind, {
       },
     },
     p: {
-      fontSize: [1, 2,30],
+      fontSize: [10, 20,30],
       letterSpacing: `-0.003em`,
       lineHeight: `body`,
       "--baseline-multiplier": 0.179,

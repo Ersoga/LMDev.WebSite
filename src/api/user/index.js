@@ -6,3 +6,9 @@ export const login = ({userName,password})=>{
         url:"/Oauth/Token"//测试使用，从测试api直接获取token
     })
 }
+export const getUserInfo = ()=>{
+    return apiserver.request({
+        withPrefix:true,
+        url:"/User/GetUserInfoByToken"
+    })
+}
