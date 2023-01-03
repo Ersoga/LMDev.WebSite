@@ -5,13 +5,14 @@ import { Helmet } from 'react-helmet';
 import { useMediaQuery } from '../../hooks/use-media-query';
 import { useSiteConfiguration } from '../../hooks/use-site-configuration';
 import { Animation } from '../Animation';
+import store from '../../store'
 import * as classes from './style.module.css';
 
 export function Header(): React.ReactElement {
     const [open, setOpen] = React.useState<boolean>(false);
     const siteConfiguration = useSiteConfiguration();
     const isDesktopBreakpoint = useMediaQuery('(min-width: 992px)');
-
+    const userinfo = store.getState().userinfo;
     const navigationItems = (
         <>
             {siteConfiguration.navigation.header.map((linkObject, key) => {
@@ -33,7 +34,7 @@ export function Header(): React.ReactElement {
                 className={classes.CtaButton}
                 onClick={!isDesktopBreakpoint ? () => setOpen(!open) : undefined}
             >
-                {siteConfiguration.navigation.ctaButton.label}
+                {userinfo.hasGetInfo?userinfo.userName:siteConfiguration.navigation.ctaButton.label}
             </a>
         </>
     );
@@ -72,7 +73,6 @@ export function Header(): React.ReactElement {
             {isDesktopBreakpoint ? topNavigationBar : sideNavigationBar}
             </Animation>
           {/* </div> */}
-        
       </header>
     );
 }

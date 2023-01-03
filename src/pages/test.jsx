@@ -1,14 +1,13 @@
-import store from "../../store";
+//import store from "../store/index";
 import * as React from 'react'
 import { Parallax } from "@react-spring/parallax"
-import Layout from "../../components/layout"
-import Divider from "../../elements/divider"
-import { UpDown, UpDownWide } from "../../styles/animations"
-import Svg from "../../components/svg"
-import Seo from "../../components/seo"
-import LoginForm  from "../../components/LoginForm"
-
-const Login = () => {
+import Layout from "../components/layout"
+import Divider from "../elements/divider"
+import { UpDown, UpDownWide } from "../styles/animations"
+import Svg from "../components/svg"
+import Seo from "../components/seo"
+import TestApi from "../components/text"
+const Test = () => {
   return (
     <Layout>
     <Parallax pages={1}>
@@ -41,7 +40,7 @@ const Login = () => {
           <Svg icon="hexa" width={16} stroke color="icon_darker" left="10%" top="50%" />
           <Svg icon="hexa" width={8} stroke color="icon_darker" left="80%" top="70%" />
         </Divider>
-        <LoginForm></LoginForm>
+        <TestApi></TestApi>
       </div>
     </Parallax>
   </Layout>
@@ -49,6 +48,6 @@ const Login = () => {
   
   }
 
-export default Login
+export default Test
 
-export const Head = () => <Seo title="Login" />
+export const Head = () => <Seo title="Test" />

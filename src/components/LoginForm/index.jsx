@@ -4,8 +4,9 @@ import { Themed } from "@theme-ui/mdx"
 import Content from "../../elements/content"
 import Inner from "../../elements/inner"
 import {login} from '../../api/user'
-import {setToken} from '../../libs/util'
+//import {setToken} from '../../libs/util'
 import * as classes from "./style.module.css"
+import store from '../../store'
 class LoginForm extends React.Component{
     constructor(props)
     {
@@ -25,8 +26,23 @@ class LoginForm extends React.Component{
           login(this.state.userName,this.state.password).then((res)=>
           {
             console.log(`token:${res.data.data.token}`);
-            setToken(res.data.data.token)
-            alert("登陆成功")
+            store.dispatch({
+              type:'setToken',
+              value:res.data.data.token
+            })
+            store.dispatch({
+              type:'setHasGetInfo',
+              value:true
+            })
+            store.dispatch({
+              type:'setUserName',
+              value:"TestUser"
+            })
+            //setToken(res.data.data.token)
+            alert("登陆成功:"+this.state.userName)
+            
+          }).then((res)=>{
+            //window.location.pathname = "./";
           })
           
         }

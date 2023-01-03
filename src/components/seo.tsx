@@ -31,7 +31,7 @@ const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children
   return (
     <>
       <title>{seo.title}</title>
-      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+      <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta property="og:title" content={seo.title} />
@@ -48,8 +48,8 @@ const Seo = ({ title = ``, description = ``, pathname = ``, image = ``, children
       <meta name="twitter:image:alt" content={seo.description} />
       <meta name="twitter:creator" content={author} />
       <meta name="gatsby-theme" content="@lekoarts/gatsby-theme-cara" />
-      <link rel="icon" type="image/png" sizes="22x33" href={withPrefix(`/lm22x33.png`)} />
-      <link rel="icon" type="image/png" sizes="32x64" href={withPrefix(`/lm32x64.png`)} />
+      <link rel="icon" type="image/png" sizes="33x22" href={withPrefix(`/lm22x33.png`)} />
+      <link rel="icon" type="image/png" sizes="64x32" href={withPrefix(`/lm32x64.png`)} />
       <link rel="apple-touch-icon" sizes="180x180" href={withPrefix(`/apple-touch-icon.png`)} />
       {children}
     </>

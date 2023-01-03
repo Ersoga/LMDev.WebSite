@@ -7,6 +7,7 @@ import axios from "axios"
 import apiserver from '../libs/api.request'
 import {login} from '../api/user'
 import {setToken,getToken} from '../libs/util'
+import store from '../store'
 //import Style from "./gen-machine-key-tool.module.css"
 class TestApi extends React.Component{
     constructor(props)
@@ -39,6 +40,10 @@ class TestApi extends React.Component{
         {
           alert(ex.message);
         }
+    }
+    storeHandle()
+    {
+        console.log(store.getState())
     }
     userNameChanged(event)
     {
@@ -97,6 +102,9 @@ class TestApi extends React.Component{
 
                   <button className="blue" onClick={this.loginHandle}>
                     Wear
+                  </button>
+                  <button className="blue" onClick={this.storeHandle}>
+                    Store
                   </button>
                 </Themed.div>
               </Themed.div>
