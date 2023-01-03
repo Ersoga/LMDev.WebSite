@@ -9,7 +9,7 @@
                 { "label": "文章", "url": "/forward" },
                 { "label": "关于", "url": "/#about" }
             ],
-            "ctaButton": { "openNewTab": true, "label": "登陆", "url": "/login" },
+            "ctaButton": { "openNewTab": false, "label": "登陆", "url": "/login" },
             "footer": [
                 { "label": "Privacy", "url": "/privacy" },
                 { "label": "Imprint", "url": "/imprint" }
