@@ -49,5 +49,4 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
     </MDXProvider>
   </React.Fragment>
 );
-document.getElementById('root')
 export default Layout

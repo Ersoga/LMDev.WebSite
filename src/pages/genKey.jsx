@@ -41,8 +41,6 @@ const GenKey = () => {
           <Svg icon="hexa" width={8} stroke color="icon_darker" left="80%" top="70%" />
         </Divider>
         <GenMachineKeyTool machineCode="6666"></GenMachineKeyTool>
-        {JSON.stringify(store.getState())}
-        {JSON.stringify(localStorage.getItem("persist:root"))}
       </div>
     </Parallax>
   </Layout>
