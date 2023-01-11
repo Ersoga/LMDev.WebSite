@@ -40,11 +40,22 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/content/blog`,
+      },
+    },
     'gatsby-transformer-json',
+    'gatsby-plugin-mdx',
     true && {
       resolve: `gatsby-plugin-mdx`,
       options: {},
     },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-image",
     {
       resolve:`gatsby-plugin-theme-ui`,
       options:{
@@ -53,9 +64,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `LMDev`,
-        short_name: `Cara`,
-        description: `Playful and Colorful One-Page portfolio featuring Parallax effects and animations`,
+        name: `Laser Manufacturing`,
+        short_name: `LMDev`,
+        description: `Laser manufacturing`,
         start_url: `/`,
         background_color: `#141821`,
         // This will impact how browsers show your PWA/website
@@ -64,13 +75,13 @@ module.exports = {
         display: `standalone`,
         icons: [
           {
-            src: `/android-chrome-192x192.png`,
-            sizes: `192x192`,
+            src: `/lm32x64.png`,
+            sizes: `64x32`,
             type: `image/png`,
           },
           {
-            src: `/android-chrome-512x512.png`,
-            sizes: `512x512`,
+            src: `/lm22x33.png`,
+            sizes: `33x22`,
             type: `image/png`,
           },
         ],

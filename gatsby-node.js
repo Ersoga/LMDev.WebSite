@@ -1,3 +1,4 @@
+
 const standardBasePath = `/`
 
 exports.createPages = async ({ actions }, themeOptions) => {
@@ -9,4 +10,5 @@ exports.createPages = async ({ actions }, themeOptions) => {
     path: basePath,
     component: require.resolve(`./src/templates/cara.tsx`),
   })
+
 }

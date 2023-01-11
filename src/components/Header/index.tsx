@@ -28,6 +28,7 @@ export function Header(): React.ReactElement {
                 );
             })}
             <a
+                style={userinfo.hasGetInfo?{visibility:'hidden'}:undefined}
                 href={siteConfiguration.navigation.ctaButton.url}
                 target={siteConfiguration.navigation.ctaButton.openNewTab ? '_blank' : undefined}
                 rel="noopener noreferrer"
@@ -47,7 +48,7 @@ export function Header(): React.ReactElement {
             </div>
             <div
                 className={classes.SideBarWrapper}
-                style={open ? { transform: 'translateX(0)', visibility: 'visible' } : undefined}
+                style={open ? { transform: 'translateX(0%)', visibility: 'visible' } : undefined}
                 aria-hidden={!open}
                 tabIndex={open ? 1 : -1}
             >

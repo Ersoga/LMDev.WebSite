@@ -6,10 +6,18 @@
                 { "label": "主页", "url": "/" },
                 { "label": "测试", "url": "/test" },
                 { "label": "授权", "url": "/genKey" },
-                { "label": "文章", "url": "/forward" },
+                { "label": "文章", "url": "/blog" },
                 { "label": "关于", "url": "/#about" }
             ],
             "ctaButton": { "openNewTab": false, "label": "登陆", "url": "/login" },
+            "ComBox":[
+                {
+                    "head":"个人中心",
+                    "item":{
+                        "label":""
+                    }
+                }
+            ],
             "footer": [
                 { "label": "Privacy", "url": "/privacy" },
                 { "label": "Imprint", "url": "/imprint" }

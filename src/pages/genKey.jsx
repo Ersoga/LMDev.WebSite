@@ -1,3 +1,4 @@
+import store from "../store";
 import * as React from "react"
 import { Parallax } from "@react-spring/parallax"
 import Layout from "../components/layout"
@@ -40,6 +41,8 @@ const GenKey = () => {
           <Svg icon="hexa" width={8} stroke color="icon_darker" left="80%" top="70%" />
         </Divider>
         <GenMachineKeyTool machineCode="6666"></GenMachineKeyTool>
+        {JSON.stringify(store.getState())}
+        {JSON.stringify(localStorage.getItem("persist:root"))}
       </div>
     </Parallax>
   </Layout>

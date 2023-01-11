@@ -4,6 +4,11 @@ import { MDXProvider } from "@mdx-js/react"
 import { Global } from "@emotion/react"
 import MdxComponents from "./mdx-components"
 
+import {Provider} from 'react-redux'
+import {persistor} from '../store'
+import store from "../store"
+import {PersistGate} from 'redux-persist/lib/integration/react'
+
 type LayoutProps = { children: React.ReactNode; className?: string }
 
 const Layout = ({ children, className = `` }: LayoutProps) => (
@@ -43,6 +48,6 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
       <main className={className}>{children}</main>
     </MDXProvider>
   </React.Fragment>
-)
-
+);
+document.getElementById('root')
 export default Layout
